@@ -25,4 +25,9 @@ val jupiterVersion: String by rootProject.extra
 
 dependencies {
     implementation("org.junit.jupiter:junit-jupiter-api:$jupiterVersion")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+}
+
+tasks.getByName<Test>("test") {
+    useJUnitPlatform()
 }
