@@ -9,20 +9,13 @@ repositories {
     mavenCentral()
 }
 
-val jupiterVersion: String by rootProject.extra
 
 dependencies {
-    implementation("org.junit.jupiter:junit-jupiter-api:$jupiterVersion")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
-}
+    val projectDependency = rootProject.ext["libraries"] as Map<String, String>
 
-//dependencies {
-//    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
-//    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
-////
-////    testImplementation(rootProject.ext.supportDependencies.junit_jupiter)
-////    testRuntimeOnly(rootProject.ext.supportDependencies.junit_engine)
-//}
+    testImplementation(projectDependency["junitJupiter"]!!)
+    testRuntimeOnly(projectDependency["junitEngine"]!!)
+}
 
 tasks.getByName<Test>("test") {
     useJUnitPlatform()
