@@ -1,5 +1,6 @@
 buildscript {
     apply(from="../dependencies.gradle")
+    apply(from="../dependencies.gradle.kts")
 }
 
 plugins {
@@ -19,6 +20,9 @@ dependencies {
 
     testImplementation(projectDependency["junitJupiter"]!!)
     testRuntimeOnly(projectDependency["junitEngine"]!!)
+
+//    dependencies from dependencies.gradle.kts
+    implementation("org.apache.commons:commons-lang3:${rootProject.ext["commonsVersion"]}")
 }
 
 tasks.getByName<Test>("test") {

@@ -24,6 +24,8 @@ dependencies {
 
     testImplementation(projectDependency["junitJupiter"]!!)
     testRuntimeOnly(projectDependency["junitEngine"]!!)
+
+    implementation("org.apache.commons:commons-lang3:${rootProject.ext["commonsVersion"]}")
 }
 
 tasks.getByName<Test>("test") {
