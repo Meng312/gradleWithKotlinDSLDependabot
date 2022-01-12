@@ -6,9 +6,11 @@ plugins {
 
 buildscript {
     apply(from="dependencies.gradle")
+    apply(from="dependencies.gradle.kts")
 }
 
 apply(from="dependencies.gradle")
+apply(from="dependencies.gradle.kts")
 
 group = "org.example"
 version = "1.0-SNAPSHOT"
