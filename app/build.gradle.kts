@@ -1,5 +1,5 @@
 buildscript {
-    apply(from="../dependencies.kts")
+    apply(from="../dependencies")
     apply(from="../dependencies.gradle.kts")
 }
 

@@ -5,11 +5,11 @@ plugins {
 }
 
 buildscript {
-    apply(from="dependencies.kts")
+    apply(from="dependencies")
     apply(from="dependencies.gradle.kts")
 }
 
-apply(from="dependencies.kts")
+apply(from="dependencies")
 apply(from="dependencies.gradle.kts")
 
 group = "org.example"
