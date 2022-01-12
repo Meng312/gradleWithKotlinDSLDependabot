@@ -8,6 +8,8 @@ buildscript {
     apply(from="dependencies.gradle")
 }
 
+apply(from="dependencies.gradle")
+
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
